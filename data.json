@@ -1,0 +1,38 @@
+[
+  {
+    "nome": "Lenovo ThinkPad P50",
+    "ano": 2015,
+    "descrição": "Clássica workstation da Lenovo, conhecida pela durabilidade extrema e teclado premiado.",
+    "link": "https://pcsupport.lenovo.com/br/pt/products/laptops-and-netbooks/thinkpad-p-series-laptops/thinkpad-p50"
+  },
+  {
+    "nome": "Dell Precision 5540",
+    "ano": 2019,
+    "descrição": "Workstation fina e leve (formato ultrabook) focada em portabilidade com potência.",
+    "link": "https://www.dell.com/support/home/pt-br/product-support/product/precision-15-5540-laptop/overview"
+  },
+  {
+    "nome": "HP ZBook Fury 16 G9",
+    "ano": 2022,
+    "descrição": "Modelo moderno da HP focado em performance extrema para renderização e CAD.",
+    "link": "https://www.hp.com/br-pt/workstations/zbook-fury-16-g9-mobile-workstation.html"
+  },
+  {
+    "nome": "Apple MacBook Pro 16 (M3 Max)",
+    "ano": 2023,
+    "descrição": "Referência para criativos e editores de vídeo, com arquitetura ARM de alta eficiência.",
+    "link": "https://www.apple.com/br/macbook-pro/"
+  },
+  {
+    "nome": "Lenovo ThinkPad P16 Gen 1",
+    "ano": 2022,
+    "descrição": "Sucessor espiritual da linha P50/P70, focado em substituir desktops.",
+    "link": "https://www.lenovo.com/br/pt/laptops/thinkpad/serie-p/ThinkPad-P16-16-inch-Intel/p/LEN101T0041"
+  },
+  {
+    "nome": "MSI CreatorPro X17",
+    "ano": 2023,
+    "descrição": "Workstation de uma marca focada em gamers, adaptada com certificação ISV para profissionais.",
+    "link": "https://br.msi.com/Content-Creation/CreatorPro-X17-A13X"
+  }
+]
