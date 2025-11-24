@@ -78,7 +78,6 @@
             </div>
             <section class="card-container" id="card-container">
                 <!-- Os cards serão injetados aqui pelo JS -->
-                 <!-- Teste -->
             </section>
         </main>
     </div>
@@ -86,6 +85,11 @@
     <!-- FOOTER -->
     <footer class="footer">
         <ul class="footer-links">
+            <li>
+                <a href="#" id="open-about">
+                    <i class="fa-solid fa-circle-info"></i> Sobre
+                </a>
+            </li>
             <li>
                 <a href="https://github.com/RainArcanjo" target="_blank">
                     <i class="fa-brands fa-github"></i> Github
@@ -99,10 +103,10 @@
         </ul>
     </footer>
 
-    <!-- MODAL DE DETALHES -->
+    <!-- MODAL DE DETALHES (PRODUTO) -->
     <div id="modal-details" class="modal-overlay">
         <div class="modal-content">
-            <button class="close-btn" onclick="fecharModal()"><i class="fa-solid fa-times"></i></button>
+            <button class="close-btn" id="close-details"><i class="fa-solid fa-times"></i></button>
             
             <div class="modal-grid">
                 <div class="modal-image-area">
@@ -141,6 +145,36 @@
                         <h3><i class="fa-solid fa-rocket"></i> Potencial de Upgrade</h3>
                         <p id="modal-upgrade">Informação sobre o melhor upgrade possível.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL SOBRE (NOVO) -->
+    <div id="modal-about" class="modal-overlay">
+        <div class="modal-content modal-about-content">
+            <button class="close-btn" id="close-about"><i class="fa-solid fa-times"></i></button>
+            
+            <div class="about-container">
+                <div class="about-header">
+                    <i class="fa-solid fa-recycle fa-3x" style="color: var(--accent-color);"></i>
+                    <h2>Sobre o Projeto</h2>
+                </div>
+                
+                <div class="about-text">
+                    <p>O <strong>Workstation Revival</strong> é uma iniciativa contra a cultura do descarte. Nosso objetivo é catalogar notebooks profissionais (Workstations) que oferecem durabilidade e capacidade de upgrade.</p>
+                    
+                    <h3><i class="fa-solid fa-triangle-exclamation"></i> O Problema: Obsolescência Programada</h3>
+                    <p>A maioria dos notebooks modernos possui carcaças frágeis e peças soldadas (RAM, CPU), forçando o descarte prematuro do equipamento ao menor sinal de defeito ou lentidão.</p>
+                    
+                    <h3><i class="fa-solid fa-check-circle"></i> A Solução</h3>
+                    <p>Workstations antigas (como as listadas aqui) foram construídas como tanques de guerra. Elas permitem:</p>
+                    <ul>
+                        <li>Troca de Processador (Socket)</li>
+                        <li>Upgrade de Placa de Vídeo (Slot MXM)</li>
+                        <li>Manutenção fácil e barata</li>
+                    </ul>
+                    <p>Ao escolher uma dessas máquinas, você economiza dinheiro e reduz o lixo eletrônico (e-waste). Este projeto foi criado para a Imersão Dev com Google Gemini 10ª Edição, por Rian Arcanjo.</p>
                 </div>
             </div>
         </div>

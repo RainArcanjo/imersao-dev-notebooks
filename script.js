@@ -13,8 +13,9 @@ const btnClear = document.getElementById("btn-clear");
 const themeToggle = document.getElementById("theme-toggle");
 const themeIcon = themeToggle.querySelector("i");
 
-// Modal
-const modal = document.getElementById("modal-details");
+// Modal de Detalhes
+const modalDetails = document.getElementById("modal-details");
+const closeDetailsBtn = document.getElementById("close-details");
 const modalImg = document.getElementById("modal-img");
 const modalBrandTag = document.getElementById("modal-brand-tag");
 const modalTitle = document.getElementById("modal-title");
@@ -24,6 +25,11 @@ const modalCpu = document.getElementById("modal-cpu");
 const modalGpuOrig = document.getElementById("modal-gpu-orig");
 const modalGpuType = document.getElementById("modal-gpu-type");
 const modalUpgrade = document.getElementById("modal-upgrade");
+
+// Modal Sobre
+const modalAbout = document.getElementById("modal-about");
+const btnOpenAbout = document.getElementById("open-about");
+const closeAboutBtn = document.getElementById("close-about");
 
 // Inicialização
 window.onload = async () => {
@@ -76,10 +82,11 @@ function aplicarFiltros() {
     const cpuValue = filterCpu.value;
 
     const filteredData = allData.filter(item => {
+        // CORREÇÃO: Usando .descricao (sem acento)
         const textMatch = 
             (item.nome || '').toLowerCase().includes(searchTerm) || 
             (item.gpu_original || '').toLowerCase().includes(searchTerm) ||
-            (item.descrição || '').toLowerCase().includes(searchTerm);
+            (item.descricao || '').toLowerCase().includes(searchTerm);
 
         const brandMatch = brandValue === 'all' || (item.fabricante === brandValue);
         const gpuMatch = gpuValue === 'all' || (item.tipo_gpu || '').includes(gpuValue);
@@ -123,8 +130,9 @@ function renderizarCards(data) {
 
         const card = document.createElement("article");
         card.classList.add("card");
-        card.onclick = () => abrirModal(item, brandClass, imageSrc);
+        card.onclick = () => abrirModalDetails(item, brandClass, imageSrc);
 
+        // REMOVIDO: A tag <p> com a descrição. Agora só aparece no modal.
         card.innerHTML = `
             <div class="card-header">
                 <span class="brand-tag ${brandClass}">${item.fabricante}</span>
@@ -150,14 +158,17 @@ function atualizarContador(count) {
     resultCount.textContent = `${count} máquinas encontradas no acervo.`;
 }
 
-// === LÓGICA DO MODAL ===
-function abrirModal(item, brandClass, imageSrc) {
+// === LÓGICA DO MODAL DETALHES ===
+function abrirModalDetails(item, brandClass, imageSrc) {
     modalImg.src = imageSrc;
     modalBrandTag.textContent = item.fabricante;
     modalBrandTag.className = `brand-tag ${brandClass}`; 
     
     modalTitle.textContent = item.nome;
-    modalDesc.textContent = item.descrição;
+    
+    // CORREÇÃO: Usando .descricao (sem acento)
+    modalDesc.textContent = item.descricao;
+    
     modalYear.textContent = item.ano;
     
     modalCpu.innerHTML = item.cpu_socketada ? '<span style="color:#4caf50">Socket (Trocável)</span>' : '<span style="color:#f44336">Soldada (BGA)</span>';
@@ -165,15 +176,29 @@ function abrirModal(item, brandClass, imageSrc) {
     modalGpuType.textContent = item.tipo_gpu;
     modalUpgrade.textContent = item.melhor_upgrade_gpu;
 
-    modal.style.display = "flex";
+    modalDetails.style.display = "flex";
 }
 
-function fecharModal() {
-    modal.style.display = "none";
+closeDetailsBtn.onclick = () => {
+    modalDetails.style.display = "none";
 }
-// === Teste ===
+
+// === LÓGICA DO MODAL SOBRE ===
+btnOpenAbout.onclick = (e) => {
+    e.preventDefault();
+    modalAbout.style.display = "flex";
+}
+
+closeAboutBtn.onclick = () => {
+    modalAbout.style.display = "none";
+}
+
+// FECHAR AO CLICAR FORA (GLOBAL)
 window.onclick = function(event) {
-    if (event.target == modal) {
-        fecharModal();
+    if (event.target == modalDetails) {
+        modalDetails.style.display = "none";
+    }
+    if (event.target == modalAbout) {
+        modalAbout.style.display = "none";
     }
 }
