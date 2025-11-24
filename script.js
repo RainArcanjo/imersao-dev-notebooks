@@ -171,7 +171,7 @@ function abrirModal(item, brandClass, imageSrc) {
 function fecharModal() {
     modal.style.display = "none";
 }
-
+// === Teste ===
 window.onclick = function(event) {
     if (event.target == modal) {
         fecharModal();
