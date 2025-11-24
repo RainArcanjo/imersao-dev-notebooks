@@ -1,38 +1,288 @@
 [
   {
-    "nome": "Lenovo ThinkPad P50",
+    "nome": "HP ZBook 15 G1",
+    "fabricante": "HP",
+    "ano": 2013,
+    "descricao": "Primeira geração ZBook. Totalmente modular, incluindo CPU socketada e MXM Type A padrão.",
+    "cpu_socketada": true,
+    "gpu_original": "Quadro K1100M / K2100M",
+    "tipo_gpu": "MXM 3.0 Type A (Standard)",
+    "melhor_upgrade_gpu": "Quadro M2200 ou GTX 965M Type A",
+    "imagem": "https://outletclick.com/media/catalog/product/cache/89edef726168795512f5213565bf2831/i/h/ihz15g1i74k1119_3.jpg"
+  },
+  {
+    "nome": "HP ZBook 15 G2",
+    "fabricante": "HP",
+    "ano": 2014,
+    "descricao": "Refinamento do G1. Excelente para upgrades. Última geração com MXM padrão na linha de 15\".",
+    "cpu_socketada": true,
+    "gpu_original": "Quadro K1100M / K2100M / K2200M",
+    "tipo_gpu": "MXM 3.0 Type A (Standard)",
+    "melhor_upgrade_gpu": "Quadro M2200",
+    "imagem": "https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c04517455.png"
+  },
+  {
+    "nome": "HP ZBook 15 G3",
+    "fabricante": "HP",
+    "ano": 2016,
+    "descricao": "Novo chassi. Mais leve. CPU soldada.",
+    "cpu_socketada": false,
+    "gpu_original": "Quadro M1000M / M2000M",
+    "tipo_gpu": "MXM Type A",
+    "melhor_upgrade_gpu": "Quadro M2200M HP OEM",
+    "imagem": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028350416/FYJkDQZrmxjMvZLt.jpg"
+  },
+  {
+    "nome": "HP ZBook 15 G4",
+    "fabricante": "HP",
+    "ano": 2017,
+    "descricao": "Atualização Kaby Lake do G3, mantendo GPU proprietária.",
+    "cpu_socketada": false,
+    "gpu_original": "Quadro M1200 / M2200",
+    "tipo_gpu": "HP Custom MXM",
+    "melhor_upgrade_gpu": "Quadro P2000 HP OEM",
+    "imagem": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028350416/KTxkhHRocGqhvvvo.jpg"
+  },
+  {
+    "nome": "HP ZBook 17 G1",
+    "fabricante": "HP",
+    "ano": 2013,
+    "descricao": "Versão 17”. MXM Type B totalmente padrão.",
+    "cpu_socketada": true,
+    "gpu_original": "Quadro K3100M / K4100M / K5100M",
+    "tipo_gpu": "MXM 3.0 Type B (Standard)",
+    "melhor_upgrade_gpu": "Quadro M5000M",
+    "imagem": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028350416/OwSXSHuCKuglgRfx.png"
+  },
+  {
+    "nome": "HP ZBook 17 G2",
+    "fabricante": "HP",
+    "ano": 2014,
+    "descricao": "Um tanque. Um dos melhores MXM Type B já feitos.",
+    "cpu_socketada": true,
+    "gpu_original": "Quadro K3100M / K4100M / K5100M",
+    "tipo_gpu": "MXM 3.0 Type B (Standard)",
+    "melhor_upgrade_gpu": "Quadro M5000M / GTX 1070 MXM (com mods)",
+    "imagem": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028350416/fuQYTsEMuOAyVttW.jpg"
+  },
+  {
+    "nome": "HP ZBook 17 G3",
+    "fabricante": "HP",
+    "ano": 2016,
+    "descricao": "Passou para GPU proprietária, similar à linha G3 de 15\".",
+    "cpu_socketada": false,
+    "gpu_original": "Quadro M3000M / M4000M",
+    "tipo_gpu": "HP Custom MXM",
+    "melhor_upgrade_gpu": "Apenas HP OEM",
+    "imagem": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028350416/KvobVrLBhJDpCUru.jpg"
+  },
+  {
+    "nome": "HP ZBook 17 G4",
+    "fabricante": "HP",
+    "ano": 2017,
+    "descricao": "Última geração com módulo proprietário, ainda poderosa.",
+    "cpu_socketada": false,
+    "gpu_original": "Quadro P3000 / P4000 / P5000",
+    "tipo_gpu": "HP Custom MXM",
+    "melhor_upgrade_gpu": "Modelos HP OEM",
+    "imagem": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028350416/ISAFjoqUKEZExJKi.jpg"
+  },
+  {
+    "nome": "Dell Precision M4600",
+    "fabricante": "Dell",
+    "ano": 2011,
+    "descricao": "Workstation lendária. Aceita MXM padrão com VBIOS Dell.",
+    "cpu_socketada": true,
+    "gpu_original": "Quadro 1000M / 2000M",
+    "tipo_gpu": "MXM 3.0 Type A (Standard)",
+    "melhor_upgrade_gpu": "Quadro K2100M (compatível nativa)",
+    "imagem": "https://images.pcliquidations.com/images/isaac/149/149960.png"
+  },
+  {
+    "nome": "Dell Precision M4700",
+    "fabricante": "Dell",
+    "ano": 2012,
+    "descricao": "Melhor refrigeração que o M4600. Suporte a GPUs Kepler e Maxwell.",
+    "cpu_socketada": true,
+    "gpu_original": "Quadro K1000M / K2000M",
+    "tipo_gpu": "MXM 3.0 Type A (Standard)",
+    "melhor_upgrade_gpu": "Quadro M2200",
+    "imagem": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028350416/NUojSPqONRcPbrgH.jpg"
+  },
+  {
+    "nome": "Dell Precision M4800",
+    "fabricante": "Dell",
+    "ano": 2013,
+    "descricao": "Considerado o melhor 15\" MXM já feito. Refrigeração excelente.",
+    "cpu_socketada": true,
+    "gpu_original": "Quadro K1100M / K2100M",
+    "tipo_gpu": "MXM 3.0 Type A (Standard)",
+    "melhor_upgrade_gpu": "Quadro M2200 (plug-and-play)",
+    "imagem": "https://http2.mlstatic.com/D_NQ_NP_643275-MLM49222328256_022022-O.webp"
+  },
+  {
+    "nome": "Dell Precision M6800",
+    "fabricante": "Dell",
+    "ano": 2013,
+    "descricao": "Versão 17\" do M4800. Aceita GPUs Type B enormes.",
+    "cpu_socketada": true,
+    "gpu_original": "Quadro K3100M / K4100M / K5100M",
+    "tipo_gpu": "MXM 3.0 Type B (Standard)",
+    "melhor_upgrade_gpu": "Quadro M5000M",
+    "imagem": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028350416/bCgZQlxGrsqRfBIi.jpg"
+  },
+  {
+    "nome": "Dell Precision 7510",
+    "fabricante": "Dell",
     "ano": 2015,
-    "descrição": "Clássica workstation da Lenovo, conhecida pela durabilidade extrema e teclado premiado.",
-    "link": "https://pcsupport.lenovo.com/br/pt/products/laptops-and-netbooks/thinkpad-p-series-laptops/thinkpad-p50"
+    "descricao": "Primeira geração pós-M4800. Agora CPU soldada.",
+    "cpu_socketada": false,
+    "gpu_original": "Quadro M1000M / M2000M",
+    "tipo_gpu": "MXM 3.0 Type A (Custom Dell)",
+    "melhor_upgrade_gpu": "Quadro M2200 Dell",
+    "imagem": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028350416/NEASPleNMZusQyxp.jpg"
   },
   {
-    "nome": "Dell Precision 5540",
-    "ano": 2019,
-    "descrição": "Workstation fina e leve (formato ultrabook) focada em portabilidade com potência.",
-    "link": "https://www.dell.com/support/home/pt-br/product-support/product/precision-15-5540-laptop/overview"
+    "nome": "Dell Precision 7710",
+    "fabricante": "Dell",
+    "ano": 2015,
+    "descricao": "17\" com MXM Type B customizado Dell.",
+    "cpu_socketada": false,
+    "gpu_original": "Quadro M3000M / M4000M / M5000M",
+    "tipo_gpu": "MXM 3.0 Type B (Custom Dell)",
+    "melhor_upgrade_gpu": "Quadro M5000M Dell",
+    "imagem": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028350416/RiXNSbvKBwaBEjYT.jpg"
   },
   {
-    "nome": "HP ZBook Fury 16 G9",
-    "ano": 2022,
-    "descrição": "Modelo moderno da HP focado em performance extrema para renderização e CAD.",
-    "link": "https://www.hp.com/br-pt/workstations/zbook-fury-16-g9-mobile-workstation.html"
+    "nome": "Dell Precision 7720",
+    "fabricante": "Dell",
+    "ano": 2017,
+    "descricao": "Workstation 17\" topo de linha antes da transição para DGFF. Ainda usa GPU estilo MXM.",
+    "cpu_socketada": false,
+    "gpu_original": "Quadro P3000 / P4000 / P5000",
+    "tipo_gpu": "MXM 3.0 Type B",
+    "melhor_upgrade_gpu": "Quadro P5000 Dell OEM",
+    "imagem": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028350416/TyYIaCnCaKZoldiG.jpg"
   },
   {
-    "nome": "Apple MacBook Pro 16 (M3 Max)",
-    "ano": 2023,
-    "descrição": "Referência para criativos e editores de vídeo, com arquitetura ARM de alta eficiência.",
-    "link": "https://www.apple.com/br/macbook-pro/"
+    "nome": "Dell Precision 7530",
+    "fabricante": "Dell",
+    "ano": 2018,
+    "descricao": "Transição para o formato DGFF proprietário.",
+    "cpu_socketada": false,
+    "gpu_original": "Quadro P2000 / P3200 / P4200",
+    "tipo_gpu": "Dell DGFF (Proprietário)",
+    "melhor_upgrade_gpu": "Apenas módulos Dell",
+    "imagem": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028350416/vkzeRWoQElafpRYt.jpg"
   },
   {
-    "nome": "Lenovo ThinkPad P16 Gen 1",
-    "ano": 2022,
-    "descrição": "Sucessor espiritual da linha P50/P70, focado em substituir desktops.",
-    "link": "https://www.lenovo.com/br/pt/laptops/thinkpad/serie-p/ThinkPad-P16-16-inch-Intel/p/LEN101T0041"
+    "nome": "Lenovo ThinkPad W540",
+    "fabricante": "Lenovo",
+    "ano": 2013,
+    "descricao": "Apesar do trackpad polêmico, é robusto. GPU não é MXM padrão.",
+    "cpu_socketada": true,
+    "gpu_original": "Quadro K1100M / K2100M",
+    "tipo_gpu": "Proprietário (não MXM)",
+    "melhor_upgrade_gpu": "Sem upgrade",
+    "imagem": "https://files.refurbed.com/pi/lenovo-thinkpad-w540-i7-4800mq-1-1530020633.jpg"
   },
   {
-    "nome": "MSI CreatorPro X17",
-    "ano": 2023,
-    "descrição": "Workstation de uma marca focada em gamers, adaptada com certificação ISV para profissionais.",
-    "link": "https://br.msi.com/Content-Creation/CreatorPro-X17-A13X"
+    "nome": "Lenovo ThinkPad P50",
+    "fabricante": "Lenovo",
+    "ano": 2015,
+    "descricao": "Ótimo sistema de refrigeração, mas GPU é MXM custom Lenovo.",
+    "cpu_socketada": false,
+    "gpu_original": "Quadro M1000M / M2000M",
+    "tipo_gpu": "Lenovo Custom MXM",
+    "melhor_upgrade_gpu": "Quadro M2000M Lenovo",
+    "imagem": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028350416/uYcfNtZIXUrpUjLH.jpg"
+  },
+  {
+    "nome": "Lenovo ThinkPad P70",
+    "fabricante": "Lenovo",
+    "ano": 2016,
+    "descricao": "Grande, frio e silencioso. MXM proprietário.",
+    "cpu_socketada": false,
+    "gpu_original": "Quadro M3000M / M4000M / M5000M",
+    "tipo_gpu": "Lenovo Custom MXM",
+    "melhor_upgrade_gpu": "Modelos Lenovo OEM",
+    "imagem": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028350416/CkByBNtzzBkHRKYv.jpg"
+  },
+  {
+    "nome": "Lenovo ThinkPad P52",
+    "fabricante": "Lenovo",
+    "ano": 2018,
+    "descricao": "GPU totalmente soldada.",
+    "cpu_socketada": false,
+    "gpu_original": "Quadro P1000 / P2000",
+    "tipo_gpu": "Soldado (BGA)",
+    "melhor_upgrade_gpu": "Impossível",
+    "imagem": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028350416/wYksBFwRvKrYFoFZ.jpg"
+  },
+  {
+    "nome": "MSI GT60 (MS-16F3)",
+    "fabricante": "MSI",
+    "ano": 2012,
+    "descricao": "Um dos notebooks mais compatíveis com MXM Type B em 15\".",
+    "cpu_socketada": true,
+    "gpu_original": "GTX 670M / 680M",
+    "tipo_gpu": "MXM 3.0 Type B (Standard)",
+    "melhor_upgrade_gpu": "GTX 980M / Quadro M5000M",
+    "imagem": "https://asset.msi.com/resize/image/global/product/five_pictures6_2553_20120427120202.jpg62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
+  },
+  {
+    "nome": "MSI GT70",
+    "fabricante": "MSI",
+    "ano": 2012,
+    "descricao": "Versão 17\" do GT60. Melhor refrigeração.",
+    "cpu_socketada": true,
+    "gpu_original": "GTX 670M / 680M",
+    "tipo_gpu": "MXM 3.0 Type B",
+    "melhor_upgrade_gpu": "GTX 1060/1070 MXM (com mods)",
+    "imagem": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028350416/DYeHXKYsXUAPVesm.png"
+  },
+  {
+    "nome": "Clevo P750DM",
+    "fabricante": "Clevo",
+    "ano": 2015,
+    "descricao": "15\" com CPU de desktop e MXM Type B. Workstation de elite.",
+    "cpu_socketada": true,
+    "gpu_original": "GTX 970M / 980M",
+    "tipo_gpu": "MXM 3.0 Type B",
+    "melhor_upgrade_gpu": "GTX 1070 MXM (plug-and-play)",
+    "imagem": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028350416/HaerwNrNDFSSDTtw.jpg"
+  },
+  {
+    "nome": "Clevo P770DM",
+    "fabricante": "Clevo",
+    "ano": 2015,
+    "descricao": "Versão 17\" com CPU desktop e MXM Type B duplo.",
+    "cpu_socketada": true,
+    "gpu_original": "GTX 980M / Desktop GTX 980 MXM",
+    "tipo_gpu": "MXM 3.0 Type B",
+    "melhor_upgrade_gpu": "GTX 1080 MXM",
+    "imagem": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028350416/rRvlnMzacQNgHyce.jpg"
+  },
+  {
+    "nome": "Alienware M15x",
+    "fabricante": "Alienware",
+    "ano": 2009,
+    "descricao": "Um ícone. Aceita MXM Type A e B dependendo da GPU.",
+    "cpu_socketada": true,
+    "gpu_original": "GTX 260M",
+    "tipo_gpu": "MXM 3.0 Type B",
+    "melhor_upgrade_gpu": "GTX 980M (mod necessário)",
+    "imagem": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028350416/nBKAeXPomqJJLpfA.jpg"
+  },
+  {
+    "nome": "Alienware 17 R1",
+    "fabricante": "Alienware",
+    "ano": 2013,
+    "descricao": "Suporta MXM Type B real. Uma das melhores máquinas Alienware para upgrade.",
+    "cpu_socketada": true,
+    "gpu_original": "GTX 765M / 770M / 780M",
+    "tipo_gpu": "MXM 3.0 Type B",
+    "melhor_upgrade_gpu": "GTX 1060/1070 MXM",
+    "imagem": "https://files.manuscdn.com/user_upload_by_module/session_file/310419663028350416/iQndJNeiYIdNCnfw.jpg"
   }
 ]

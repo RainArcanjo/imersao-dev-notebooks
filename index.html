@@ -1,54 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Base de Conhecimento</title>
+    <title>Workstation Revival | Base de Conhecimento</title>
     <link rel="stylesheet" href="style.css">
-
+    <!-- Ícones Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Base de Conhecimento</h1>
-        <div>
-            <input type="text" id="search-input" placeholder="Pesquise aqui">
-            <button id="botao-busca" onclick="iniciarBusca()">Buscar</button>
+        <div class="logo-area">
+            <i class="fa-solid fa-microchip"></i>
+            <h1>Workstation Revival</h1>
+        </div>
+        
+        <!-- Nova área de controles -->
+        <div class="header-controls">
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="search-input" placeholder="Pesquise modelo, GPU ou CPU...">
+            </div>
+            
+            <!-- Botão de Trocar Tema -->
+            <button id="theme-toggle" class="theme-btn" title="Alternar Modo Escuro/Claro">
+                <i class="fa-solid fa-sun"></i>
+            </button>
         </div>
     </header>
 
-    <main>
-       <section class="card-container">
-        
-        <!-- <article class="card">
-            <h2>ZBOOK 15 G3</h2>
-            <p>2013</p>
-            <p>Workstation da HP</p>
-            <a href="https://www.hp.com/br-pt/workstations/mobile-workstation-pc.html" target="_blank">HP OFFICIAL</a> -->
+    <div class="container">
+        <!-- BARRA LATERAL DE FILTROS -->
+        <aside class="filters">
+            <h3><i class="fa-solid fa-filter"></i> Filtros</h3>
+            
+            <div class="filter-group">
+                <label>Fabricante</label>
+                <select id="filter-brand">
+                    <option value="all">Todas</option>
+                    <option value="Lenovo">Lenovo</option>
+                    <option value="Dell">Dell</option>
+                    <option value="HP">HP</option>
+                    <option value="MSI">MSI</option>
+                    <option value="Clevo">Clevo</option>
+                    <option value="Alienware">Alienware</option>
+                </select>
+            </div>
 
-        </article>
+            <div class="filter-group">
+                <label>Tipo de Upgrade GPU</label>
+                <select id="filter-gpu-type">
+                    <option value="all">Qualquer</option>
+                    <option value="MXM">Slot MXM (Padrão)</option>
+                    <option value="Type A">MXM Type A</option>
+                    <option value="Type B">MXM Type B (High End)</option>
+                    <option value="Proprietário">Proprietário (Dell/HP Custom)</option>
+                    <option value="Soldad">Soldada (BGA)</option>
+                </select>
+            </div>
 
-        <!-- <article class="card">
-            <h2>Dell Precision 7720</h2>
-            <p>2014</p>
-            <p>Workstation da Dell</p>
-            <a href="https://www.dell.com/support/manuals/pt-br/precision-17-7720-laptop/prec7720_om_pub/mem%C3%B3ria?guid=guid-3d34002f-1b6a-4366-9617-a5350bdce7ae&lang=pt-br" target="_blank">Documentação</a> -->
+            <div class="filter-group">
+                <label>CPU Socketada?</label>
+                <select id="filter-cpu-socket">
+                    <option value="all">Indiferente</option>
+                    <option value="true">Sim (Trocável)</option>
+                    <option value="false">Não (BGA)</option>
+                </select>
+            </div>
+            
+            <button id="btn-clear">Limpar Filtros</button>
+        </aside>
 
-        </article>
-        
-       </section>
-    </main>
+        <!-- ÁREA DE CONTEÚDO -->
+        <main>
+            <div class="stats-bar">
+                <span id="result-count">Carregando base de dados...</span>
+            </div>
+            <section class="card-container" id="card-container">
+                <!-- Os cards serão injetados aqui pelo JS -->
+            </section>
+        </main>
+    </div>
 
+    <!-- FOOTER -->
     <footer class="footer">
         <ul class="footer-links">
             <li>
-                <a href="https://github.com/RainArcanjo">Github</a>
+                <a href="https://github.com/RainArcanjo" target="_blank">
+                    <i class="fa-brands fa-github"></i> Github
+                </a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/in/rian-arcanjo/">Linkedin</a>
+                <a href="https://www.linkedin.com/in/rian-arcanjo/" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> Linkedin
+                </a>
             </li>
         </ul>
-
     </footer>
+
+    <!-- MODAL DE DETALHES -->
+    <div id="modal-details" class="modal-overlay">
+        <div class="modal-content">
+            <button class="close-btn" onclick="fecharModal()"><i class="fa-solid fa-times"></i></button>
+            
+            <div class="modal-grid">
+                <div class="modal-image-area">
+                    <img id="modal-img" src="" alt="Detalhe do Notebook">
+                    <span id="modal-brand-tag" class="brand-tag">Marca</span>
+                </div>
+                
+                <div class="modal-info-area">
+                    <h2 id="modal-title">Nome do Modelo</h2>
+                    <p id="modal-desc" class="modal-description">Descrição completa do modelo.</p>
+                    
+                    <div class="specs-grid">
+                        <div class="spec-item">
+                            <i class="fa-solid fa-calendar"></i>
+                            <span>Ano</span>
+                            <strong id="modal-year">2015</strong>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fa-solid fa-microchip"></i>
+                            <span>CPU</span>
+                            <strong id="modal-cpu">Socketada</strong>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>GPU Original</span>
+                            <strong id="modal-gpu-orig">Quadro M2000M</strong>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fa-solid fa-puzzle-piece"></i>
+                            <span>Formato GPU</span>
+                            <strong id="modal-gpu-type">MXM A</strong>
+                        </div>
+                    </div>
+
+                    <div class="upgrade-box">
+                        <h3><i class="fa-solid fa-rocket"></i> Potencial de Upgrade</h3>
+                        <p id="modal-upgrade">Informação sobre o melhor upgrade possível.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
